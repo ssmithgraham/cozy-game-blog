@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../icon.ico" />
+    <meta charset="utf-8" />
+    <title>Coffee Talk</title>
+     <link rel = "stylesheet" href="ctstyle.css">
+
+    <br />
+    <nav style="font-size: 14px">
+      <span id="acnav" onmouseover="mouseOverNav(1)" onmouseout="mouseOutNav()"
+        >|<a href="animalcrossing.html">Animal Crossing</a>|</span
+      >
+      <span id="sdnav" onmouseover="mouseOverNav(2)" onmouseout="mouseOutNav()"
+        >|<a href="stardewvalley.html">Stardew Valley</a>|</span
+      >
+      <span id="srnav" onmouseover="mouseOverNav(3)" onmouseout="mouseOutNav()"
+        >|<a href="slimerancher.html">Slime Rancher</a>|</span
+      >
+      <span id="ctnav" onmouseover="mouseOverNav(4)" onmouseout="mouseOutNav()"
+        >|<a href="coffeetalk.html">Coffee Talk</a>|</span
+      >
+      <span
+        id="infonav"
+        onmouseover="mouseOverNav(5)"
+        onmouseout="mouseOutNav()"
+        >|<a href="../info.html">Info</a>|</span
+      >
+    </nav>
+    <script type="text/javascript">
+      window.addEventListener("load", eventWindowLoaded, false);
+      function eventWindowLoaded() {
+        canvasApp();
+      }
+      function canvasApp() {
+        var theCanvas = document.getElementById("next");
+        var my_canvas = theCanvas.getContext("2d");
+        my_canvas.fillStyle = "rgb(98, 46, 156)";
+        my_canvas.fillRect(10, 10, 65, 40);
+
+        my_canvas.font = "20px Courier";
+        my_canvas.fillStyle = "black";
+        my_canvas.fillText("Next", 12, 30);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Coffee Talk</h1>
+      <p>
+        <em>
+          "There’s a particular vibe to a good coffee shop; a chill atmosphere
+          where people catch up with one another and enjoy a good hot drink.
+          Coffee Talk captures that same vibe"</em
+        ><cite style="font-size: 10px"> - Rock Paper Shotgun </cite>
+      </p>
+    </header>
+    <center>
+    <img
+      src="../images/ct0.png"
+      width="550"
+      height="300"
+      alt="coffee talk promo pic"
+      id="ctss"
+    />
+    <canvas id="next" width="65" height="40" onclick="mouseClick()">
+      next button
+    </canvas> </center>
+    <br><hr><br>
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbYiwLKPVeil0XwALElk6f2gmHz-m5ZKGBaGIdierNuh3e1fFa_2_dh9BWRvKmy9bs20E&usqp=CAU" width = "160px" class = "icon3">
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN57oSJGmt4HlJv_fBJ5UwxEkNwmeKrQuhbwoRiFB9C5gG1oIFbiIeIAQGjj-Wcnw3lmI&usqp=CAU" width = "160px" class = "icon2">
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7jiFNkuIOcx6Gx_nJie3QrsxbSkx_xprxL7WJLAOxIQVUVxgHcH9IRcZ8GTNLLBdlj6Q&usqp=CAU" width = "160px" class = "icon">
+    <div class ="infobox">
+    <h3>About <img src = "https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/caffeine-icon.png" width = "30px"></h3>
+    <p>
+      Coffee Talk is a simulation game where you work as a barista in an urban
+      fantasy coffee shop. It was developed and published by Toge Productions
+      and released for PC on Jan 29, 2020.
+    </p> </div>
+    <div class ="infobox">
+    <h3>Features <img src= "https://uxwing.com/wp-content/themes/uxwing/download/food-and-drinks/coffee-bean-icon.png" width = "30px"> </h3>
+    <p>
+      Learn the stories of the inhabitants in an alternate version of Seattle,
+      where various different fantasy races live together with humans. You can
+      discover the branching storylines of your cafe's customers as you engage
+      in simple yet satisfying gameplay of brewing up different drinks.
+    </p> </div>
+    <div class ="infobox">
+    <h3>Other Info <img src="https://cdn-icons-png.flaticon.com/512/2490/2490819.png" width = "30px"></h3>
+    <p>
+      This game's art style, soundtrack, and gameplay all ooze a feeling of calm
+      and comfort. If you're looking for the vibe of a late night, cozy coffee
+      shop this game will definitely deliver.
+    </p>
+
+    <p>
+      If slice-of-life stories aren't very engaging for you, you might not get
+      too immersed in the stories presented in Coffee Talk. It's also a fairly
+      short experience, so if you're looking for a game to sink a lot of hours
+      in, you may want to look elsewhere.
+    </p> </div>
+    <hr />
+    <script>
+      let ctimgs = [];
+      for (var i = 0; i < 6; i++) {
+        let num = i;
+        ctimgs[i] = "../images/ct" + num + ".png";
+      }
+      let ctslide = document.getElementById("ctss");
+
+      function mouseClick() {
+        if (ctslide.getAttribute("src") == "../images/ct0.png") {
+          ctslide.setAttribute("src", ctimgs[1]);
+        } else if (ctslide.getAttribute("src") == "../images/ct1.png") {
+          ctslide.setAttribute("src", ctimgs[2]);
+        } else if (ctslide.getAttribute("src") == "../images/ct2.png") {
+          ctslide.setAttribute("src", ctimgs[3]);
+        } else if (ctslide.getAttribute("src") == "../images/ct3.png") {
+          ctslide.setAttribute("src", ctimgs[4]);
+        } else if (ctslide.getAttribute("src") == "../images/ct4.png") {
+          ctslide.setAttribute("src", ctimgs[0]);
+        }
+      }
+      let acbg = document.getElementById("acnav");
+      let sdbg = document.getElementById("sdnav");
+      let srbg = document.getElementById("srnav");
+      let ctbg = document.getElementById("ctnav");
+      let infobg = document.getElementById("infonav");
+      bgs = [acbg, sdbg, srbg, ctbg, infobg];
+
+      function mouseOverNav(a) {
+        if (a == 1) {
+          acbg.style.backgroundColor = "#FFFFFF";
+          acbg.style.fontWeight = "bold";
+        } else if (a == 2) {
+          sdbg.style.backgroundColor = "#FFFFFF";
+          sdbg.style.fontWeight = "bold";
+        } else if (a == 3) {
+          srbg.style.backgroundColor = "#FFFFFF";
+          srbg.style.fontWeight = "bold";
+        } else if (a == 4) {
+          ctbg.style.backgroundColor = "#FFFFFF";
+          ctbg.style.fontWeight = "bold";
+        } else {
+          infobg.style.backgroundColor = "#FFFFFF";
+          infobg.style.fontWeight = "bold";
+        }
+      }
+      function mouseOutNav() {
+        for (let i = 0; i < bgs.length; i++) {
+          bgs[i].style.backgroundColor = "#b89fd6";
+          bgs[i].style.fontWeight = "normal";
+        }
+      }
+    </script>
+    <footer>
+      <a href="../project03.html"> Home </a>
+      <br />
+      Copyright &copy; 2022 by me
+    </footer>
+  </body>
+</html>

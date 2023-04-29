@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../icon.ico" />
+    <meta charset="utf-8" />
+    <title>Animal Crossing</title>
+     <link rel = "stylesheet" href="acstyle.css">
+    <br />
+    <nav style="font-size: 14px">
+      <span id="acnav" onmouseover="mouseOverNav(1)" onmouseout="mouseOutNav()"
+        >|<a href="animalcrossing.html">Animal Crossing</a>|</span
+      >
+      <span id="sdnav" onmouseover="mouseOverNav(2)" onmouseout="mouseOutNav()"
+        >|<a href="stardewvalley.html">Stardew Valley</a>|</span
+      >
+      <span id="srnav" onmouseover="mouseOverNav(3)" onmouseout="mouseOutNav()"
+        >|<a href="slimerancher.html">Slime Rancher</a>|</span
+      >
+      <span id="ctnav" onmouseover="mouseOverNav(4)" onmouseout="mouseOutNav()"
+        >|<a href="coffeetalk.html">Coffee Talk</a>|</span
+      >
+      <span
+        id="infonav"
+        onmouseover="mouseOverNav(5)"
+        onmouseout="mouseOutNav()"
+        >|<a href="../info.html">Info</a>|</span
+      >
+    </nav>
+    <script type="text/javascript">
+      window.addEventListener("load", eventWindowLoaded, false);
+      function eventWindowLoaded() {
+        canvasApp();
+      }
+      function canvasApp() {
+        var theCanvas = document.getElementById("next");
+        var my_canvas = theCanvas.getContext("2d");
+        my_canvas.fillStyle = "rgb(0, 191, 172)";
+        my_canvas.fillRect(10, 10, 65, 40);
+
+        my_canvas.font = "20px Garamond";
+        my_canvas.fillStyle = "black";
+        my_canvas.fillText("Next", 12, 30);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Animal Crossing</h1>
+      <p>
+        <em>
+          "Make friends with adorable animal villagers and have fun creating a
+          world of your own in the Animal Crossing series."</em
+        ><cite style="font-size: 14px"> - animal-crossing.com </cite>
+      </p>
+    </header>
+    <img src ="https://img.icons8.com/clouds/500/animal-crossing.png" width = 300px" class = "icon">
+    <img src = "https://static.wikia.nocookie.net/animalcrossingpocketcamp_gamepedia_en/images/c/cd/Niko_Icon.png/revision/latest?cb=20211028210955" width = "200px" class = "icon2">
+      <center>
+
+    <img
+      src="../images/ac0.png"
+      height="300"
+      width="550"
+      alt="Animal Crossing promo picture"
+      id="acss"
+      class = "images"
+    />
+    <canvas id="next" width="65" height="40" onclick= "mouseClick()" 
+    class = "images2">
+      next button
+    </canvas> </center>
+    <br>
+    <hr>
+    <br>
+    <div class = "infobox box1">
+    <h3>About <img src = "https://www.belltreeforums.com/data/attachments/0/803-90cf2a9af3bbb1332458c3b5310099ca.jpg" width ="30px"></h3>
+    <p>
+      Animal Crossing New Horizons is the 5th and newest entry in the Animal
+      Crossing series. It released on March 20, 2020 for Nintendo Switch. It is
+      a life simulation game that works in real time.
+    </p>
+  </div>
+  <div class="infobox box2">
+    <h3>Features <img src = "https://www.belltreeforums.com/data/attachments/0/780-3b8b918792aae5136a4a3f5be9933935.jpg" width = "30px"> </h3>
+      Animal Crossing places you in a town full of cute animal villagers with
+      different personalities. You're encouraged to befriend your animal
+      villagers and help develop the town. In New Horizons, you have complete
+      customization over your town with access to terraform tools and the
+      ability to place furniture all over your island. You can also spend you
+      time planting flowers, digging up fossils, fishing, or catching bugs!
+  </div>
+    <div class="infobox box3">
+    <h3>Other Info <img src= "https://image.spreadshirtmedia.com/image-server/v1/designs/1030279079,width=178,height=178.png" width = "50px" ></h3>
+    <p>
+      Animal Crossing New Horizons is a great game to chill out to. You have
+      total control over your own play style whether you want to maximize your
+      bell(money) output, collect everything in the game, or just put in a few
+      minutes in your freetime to chat to your villagers. Its a super soothing
+      experience to take a walk down the beach or listen to the wind rustle the
+      leaves of your very own apple orchard. Definitely take some time to lounge
+      in your coziest chair with your favorite beverage and get to know the
+      world of Animal Crossing!
+    </p>
+
+    <p>
+      If you find yourself running out of things to do in New Horizons, I would
+      definitely recommend checking out the previous game in the series, New
+      Leaf! Animal Crossing New Leaf allows a greater level of progression for
+      your town with several buildings, upgrades, and NPCs to meet not available
+      in New Horizons. I would even suggest checking City Folk out if you want
+      even more Animal Crossing content!
+    </p>
+       <img src="https://64.media.tumblr.com/efab6dc7a3940743b070d4638e162758/51315d3c8b5ca5d5-5f/s250x400/21cd19612d4bb36a493b51061ca761a175edd4cd.pnj" width=" 200px" class = "icon3">
+  </div>
+
+    <hr />
+    <script>
+      let acimgs = [];
+      for (var i = 0; i < 6; i++) {
+        let num = i;
+        acimgs[i] = "../images/ac" + num + ".png";
+      }
+      console.log(acimgs);
+      let acslide = document.getElementById("acss");
+
+      function mouseClick() {
+        console.log(acslide.getAttribute("src"));
+        if (acslide.getAttribute("src") == "../images/ac0.png") {
+          acslide.setAttribute("src", acimgs[1]);
+          console.log("changed");
+        } else if (acslide.getAttribute("src") == "../images/ac1.png") {
+          acslide.setAttribute("src", acimgs[2]);
+          console.log("changed");
+        } else if (acslide.getAttribute("src") == "../images/ac2.png") {
+          acslide.setAttribute("src", acimgs[3]);
+          console.log("changed");
+        } else if (acslide.getAttribute("src") == "../images/ac3.png") {
+          acslide.setAttribute("src", acimgs[4]);
+          console.log("changed");
+        } else if (acslide.getAttribute("src") == "../images/ac4.png") {
+          acslide.setAttribute("src", acimgs[5]);
+          console.log("changed");
+        } else if (acslide.getAttribute("src") == "../images/ac5.png") {
+          acslide.setAttribute("src", acimgs[0]);
+          console.log("changed");
+        }
+      }
+      let acbg = document.getElementById("acnav");
+      let sdbg = document.getElementById("sdnav");
+      let srbg = document.getElementById("srnav");
+      let ctbg = document.getElementById("ctnav");
+      let infobg = document.getElementById("infonav");
+      bgs = [acbg, sdbg, srbg, ctbg, infobg];
+
+      function mouseOverNav(a) {
+        if (a == 1) {
+          acbg.style.backgroundColor = "#FFFFFF";
+          acbg.style.fontWeight = "bold";
+        } else if (a == 2) {
+          sdbg.style.backgroundColor = "#FFFFFF";
+          sdbg.style.fontWeight = "bold";
+        } else if (a == 3) {
+          srbg.style.backgroundColor = "#FFFFFF";
+          srbg.style.fontWeight = "bold";
+        } else if (a == 4) {
+          ctbg.style.backgroundColor = "#FFFFFF";
+          ctbg.style.fontWeight = "bold";
+        } else {
+          infobg.style.backgroundColor = "#FFFFFF";
+          infobg.style.fontWeight = "bold";
+        }
+      }
+      function mouseOutNav() {
+        for (let i = 0; i < bgs.length; i++) {
+          bgs[i].style.backgroundColor = "#b2ebde";
+          bgs[i].style.fontWeight = "normal";
+        }
+      }
+    </script>
+    <footer>
+      <a href="../project03.html"> Home </a>
+      <br />
+      Copyright &copy; 2022 by me
+    </footer>
+  </body>
+</html>

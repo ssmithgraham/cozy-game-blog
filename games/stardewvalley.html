@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../icon.ico" />
+    <meta charset="utf-8" />
+    <title>Stardew Valley</title>
+      <link rel = "stylesheet" href="sdstyle.css">
+    <br />
+    <nav style="font-size: 14px">
+      <span id="acnav" onmouseover="mouseOverNav(1)" onmouseout="mouseOutNav()"
+        >|<a href="animalcrossing.html">Animal Crossing</a>|</span
+      >
+      <span id="sdnav" onmouseover="mouseOverNav(2)" onmouseout="mouseOutNav()"
+        >|<a href="stardewvalley.html">Stardew Valley</a>|</span
+      >
+      <span id="srnav" onmouseover="mouseOverNav(3)" onmouseout="mouseOutNav()"
+        >|<a href="slimerancher.html">Slime Rancher</a>|</span
+      >
+      <span id="ctnav" onmouseover="mouseOverNav(4)" onmouseout="mouseOutNav()"
+        >|<a href="coffeetalk.html">Coffee Talk</a>|</span
+      >
+      <span
+        id="infonav"
+        onmouseover="mouseOverNav(5)"
+        onmouseout="mouseOutNav()"
+        >|<a href="../info.html">Info</a>|</span
+      >
+    </nav>
+    <script type="text/javascript">
+      window.addEventListener("load", eventWindowLoaded, false);
+      function eventWindowLoaded() {
+        canvasApp();
+      }
+      function canvasApp() {
+        var theCanvas = document.getElementById("next");
+        var my_canvas = theCanvas.getContext("2d");
+        my_canvas.fillStyle = "rgb(255, 196, 57)";
+        my_canvas.fillRect(10, 10, 65, 40);
+
+        my_canvas.font = "20px Courier";
+        my_canvas.fillStyle = "black";
+        my_canvas.fillText("Next", 12, 30);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Stardew Valley</h1>
+      <p>
+        <em>
+          "You've inherited your grandfather's old farm plot in Stardew Valley.
+          Armed with hand-me-down tools and a few coins, you set out to begin
+          your new life!"</em
+        ><cite style="font-size: 10px"> - stardewvalley.net </cite>
+      </p>
+      <br>
+    </header>
+    <center>
+    <img
+      src="../images/sd0.png"
+      id="sdss"
+      alt="Stardew Valley promo image"
+      width="570"
+      height="300"
+    />
+    <canvas id="next" width="65" height="40" onclick="mouseClick()">
+      next button
+    </canvas> </center>
+    <img src = "https://www.clipartmax.com/png/full/218-2182761_some-really-cute-farm-sprites-here-including-a-very-xboxone-stardew-valley.png" width = "250px" class = "icon3">
+    <img src ="https://stardewvalleywiki.com/mediawiki/images/3/35/Clock.png" width = "200px" class = "icon2">
+    <br>
+    <hr>
+    <br>
+    <div class = "infobox">
+    <h3>About <img src = "https://preview.redd.it/ul9leo4s4xq81.png?auto=webp&s=80fb91a0368ae3faea93ba5b1c2b86110f85101b" width = "50px" id = "repos">
+    </h3>
+    <p>
+      Stardew Valley was released February 26, 2016. Developed by a solo
+      developer, it quickly became a popular reimagining of the farming
+      simulator genre popularized by games like Harvest Moon.
+    </p>
+  </div>
+  <div class = "infobox">
+    <h3>Features <img src = "https://art.pixilart.com/49d1dc276202f1a.png" width = "40px" id = "repos"></h3>
+    <p>
+      Stardew Valley gives you the tools to transform an old farm plot into a
+      thriving way of life!
+    </p>
+    <ul>
+      <li>
+        Buy all kinds of seeds from the local general store to plant in your
+        farm!
+      </li>
+      <li>
+        Build different structures on your land through the local carpenter.
+      </li>
+      <li>
+        The game emphasizes socializing with the townsfolk in Pelican Town,
+        where you are able to get to know their stories, raise their friendship
+        level, and maybe even get married.
+      </li>
+      <li>
+        You can also take a break from the farm life to explore the sprawling
+        network of caves, where you can fight monsters and collect gemstones.
+      </li>
+    </ul>
+
+    <p>There's lots of secrets to discover in Stardew Valley!</p>
+  </div>
+  <div class = "infobox">
+    <h3>Other Info <img src = "https://static.wikia.nocookie.net/stardewvalley/images/b/b3/Chest.png/revision/latest/scale-to-width-down/32?cb=20190824215018" width = "20px" id = "repos"></h3>
+    <p>
+      This game is perfect for getting comfy and spending an evening building up
+      your farm! Pelican Town gives off a lovely, comforting atmosphere and the
+      soundtrack is sure to provide a warm, pleasant mood while you play. The
+      gameplay loop is very satisfying as you continuously make progress on your
+      farm, and you should feel free to play at your own pace.
+    </p>
+
+    <p>
+      Some may find the freedom Stardew Valley gives the player a bit
+      overwhelming, so if you prefer a clear sense of direction you might want
+      to consider another chill game recommendation.
+    </p>
+  </div>
+    <hr />
+    <script>
+      let sdimgs = [];
+      for (var i = 0; i < 6; i++) {
+        let num = i;
+        sdimgs[i] = "../images/sd" + num + ".png";
+      }
+      console.log(sdimgs);
+      let sdslide = document.getElementById("sdss");
+
+      function mouseClick() {
+        console.log(sdslide.getAttribute("src"));
+        if (sdslide.getAttribute("src") == "../images/sd0.png") {
+          sdslide.setAttribute("src", sdimgs[1]);
+          console.log("changed");
+        } else if (sdslide.getAttribute("src") == "../images/sd1.png") {
+          sdslide.setAttribute("src", sdimgs[2]);
+          console.log("changed");
+        } else if (sdslide.getAttribute("src") == "../images/sd2.png") {
+          sdslide.setAttribute("src", sdimgs[3]);
+          console.log("changed");
+        } else if (sdslide.getAttribute("src") == "../images/sd3.png") {
+          sdslide.setAttribute("src", sdimgs[4]);
+          console.log("changed");
+        } else if (sdslide.getAttribute("src") == "../images/sd4.png") {
+          sdslide.setAttribute("src", sdimgs[5]);
+          console.log("changed");
+        } else if (sdslide.getAttribute("src") == "../images/sd5.png") {
+          sdslide.setAttribute("src", sdimgs[0]);
+          console.log("changed");
+        }
+      }
+      let acbg = document.getElementById("acnav");
+      let sdbg = document.getElementById("sdnav");
+      let srbg = document.getElementById("srnav");
+      let ctbg = document.getElementById("ctnav");
+      let infobg = document.getElementById("infonav");
+      bgs = [acbg, sdbg, srbg, ctbg, infobg];
+
+      function mouseOverNav(a) {
+        if (a == 1) {
+          acbg.style.backgroundColor = "#FFFFFF";
+          acbg.style.fontWeight = "bold";
+        } else if (a == 2) {
+          sdbg.style.backgroundColor = "#FFFFFF";
+          sdbg.style.fontWeight = "bold";
+        } else if (a == 3) {
+          srbg.style.backgroundColor = "#FFFFFF";
+          srbg.style.fontWeight = "bold";
+        } else if (a == 4) {
+          ctbg.style.backgroundColor = "#FFFFFF";
+          ctbg.style.fontWeight = "bold";
+        } else {
+          infobg.style.backgroundColor = "#FFFFFF";
+          infobg.style.fontWeight = "bold";
+        }
+      }
+      function mouseOutNav() {
+        for (let i = 0; i < bgs.length; i++) {
+          bgs[i].style.backgroundColor = "#fff5c2";
+          bgs[i].style.fontWeight = "normal";
+        }
+      }
+    </script>
+    <footer>
+      <a href="../project03.html"> Home </a>
+      <br />
+      Copyright &copy; 2022 by me
+    </footer>
+  </body>
+</html>

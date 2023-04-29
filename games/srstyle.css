@@ -1,0 +1,78 @@
+
+      body {
+        background-color: #ffd1f0;
+        font-family: Garamond;
+        font-weight: normal;
+        margin: 0 10%;
+      }
+      h1 {
+        color: #453a35;
+        font-weight: bold;
+      }
+
+a:link, a:visited{
+  color: darkorchid;
+}
+a:hover{
+  color: rebeccapurple;
+}
+a{
+  text-decoration: none;
+}
+img{
+  border-radius: .5em;
+}
+ul{
+  list-style-image: url("../images/slimebullet.png");
+}
+
+.infobox{
+  background-color: ghostwhite;
+  width: 10em;
+  height: 2.5em;
+  padding: 2em 1em 3em;
+  border-radius: 1em;
+  border: dashed darkorchid;
+  margin: 1em;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+
+  transition-property: width, height, color, overflow background-color;
+  transition-duration: .6s;
+  transition-delay: .5s;
+  transition-timing-function: ease-in-out;
+}
+
+.infobox:hover{
+  width: 45em;
+  height: 10em;
+  color: black;
+  overflow: auto;
+  background-color: #D3E5FF;
+}
+
+h3{
+  color:black;
+}
+
+@media screen and (min-width: 70em){
+  .icon{
+    position: absolute;
+    right: 55px;
+    top: 120px;
+    rotate: 15deg;
+  }
+  .icon2{
+    position: absolute;
+    left: 50px;
+    top:45%;
+    rotate: -30deg;
+  }
+  .icon3{
+    position: absolute;
+    right: 5%;
+    top: 90%;
+    rotate: 5deg;
+
+}
+}
