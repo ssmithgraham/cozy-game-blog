@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="icon.ico" />
+    <meta charset="utf-8" />
+    <title>Cozy Games! (Project 02)</title>
+     <link rel = "stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>
+      <img
+        src="images/icon0.png"
+        width="50px"
+        id="icon1"
+        onmouseover="mouseOverIcon1()"
+      />
+      Cozy Video Game Recommendations
+      <img
+        src="images/icon0.png"
+        width="50px"
+        id="icon2"
+        onmouseover="mouseOverIcon2()"
+      />
+    </h1>
+    <center>
+      <nav style="font-size: 12px">
+        <span
+          id="acnav"
+          onmouseover="mouseOverNav(1)"
+          onmouseout="mouseOutNav()"
+          >|<a href="games/animalcrossing.html">Animal Crossing</a>|</span
+        >
+        <span
+          id="sdnav"
+          onmouseover="mouseOverNav(2)"
+          onmouseout="mouseOutNav()"
+          >|<a href="games/stardewvalley.html">Stardew Valley</a>|</span
+        >
+        <span
+          id="srnav"
+          onmouseover="mouseOverNav(3)"
+          onmouseout="mouseOutNav()"
+          >|<a href="games/slimerancher.html">Slime Rancher</a>|</span
+        >
+        <span
+          id="ctnav"
+          onmouseover="mouseOverNav(4)"
+          onmouseout="mouseOutNav()"
+          >|<a href="games/coffeetalk.html">Coffee Talk</a>|</span
+        >
+        <span
+          id="infonav"
+          onmouseover="mouseOverNav(5)"
+          onmouseout="mouseOutNav()"
+          >|<a href="info.html">Info</a>|</span
+        >
+      </nav>
+      <br />
+      <br>
+      <div
+        class="tenor-gif-embed"
+        data-postid="12376985"
+        data-share-method="host"
+        data-aspect-ratio="1.25"
+        data-width="25%"
+      >
+        <a
+          href="https://tenor.com/view/pusheen-gamer-gaming-food-sleep-gif-12376985"
+          >Pusheen Gamer GIF</a
+        >from <a href="https://tenor.com/search/pusheen-gifs">Pusheen GIFs</a>
+      </div>
+    </center>
+
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
+    <p>
+      Ever want to play a relaxing, low-stress video game for when life gets too
+      intense? Need a break from the difficulties of online multiplayer games?
+      Just looking for something new to try out? Take a look below to get a list
+      of several great games perfect for chilling out to!
+    </p>
+    <hr />
+    <br />
+    <div class = gamescontainer>
+    <a href="games/animalcrossing.html" target="reuse" class = "one mainimg">
+    <img
+      src="images/ac_banner2.png"
+      width="500"
+      id="acimg"
+      onmouseover="mouseOver(1)"
+      onmouseout="mouseOut(1)"
+      class = "rounded"
+    /> </a>
+    <dl class = "one maintxt">
+        <dt><b> Animal Crossing </b></dt>
+      <dd>
+        <em>
+          "Live life at your own pace as you garden, fish, decorate, hunt for
+          bugs and fossils, get to know the animal residents, and more. The time
+          of day and seasons match real life, so something is happening on your
+          island whether you’re there or not."
+        </em>
+      </dd>
+    </dl>
+
+    <a href="games/stardewvalley.html" target="reuse" class = "two mainimg">
+    <img
+      src="images/sd_banner.png"
+      width="500"
+      id="sdimg"
+      onmouseover="mouseOver(2)"
+      onmouseout="mouseOut(2)"
+      class = "rounded"
+    /> </a>
+    <dl class = "two maintxt">
+      <dt><b> Stardew Valley </b></dt>
+      
+      <dd>
+        <em>
+          "You've inherited your grandfather's old farm plot in Stardew Valley.
+          Armed with hand-me-down tools and a few coins, you set out to begin
+          your new life. Can you learn to live off the land and turn these
+          overgrown fields into a thriving home?"
+        </em>
+      </dd>
+    </dl>
+    <a href="games/slimerancher.html"target="reuse" class = "three mainimg"> 
+    <img
+      src="images/sr_banner.png"
+      width="500"
+      id="srimg"
+      onmouseover="mouseOver(3)"
+      onmouseout="mouseOut(3)"
+      class = "rounded"
+    /> </a>
+    <dl class = "three maintxt">
+      <dt> <b> Slime Rancher </b> </dt>
+      <dd>
+        <em
+          >"Slime Rancher is the tale of Beatrix LeBeau, a plucky, young rancher
+          who sets out for a life a thousand light years away from Earth on the
+          ‘Far, Far Range’ where she tries her hand at making a living wrangling
+          slimes."</em
+        >
+      </dd>
+    </dl>
+    <a href="games/coffeetalk.html"target="reuse" class = "four mainimg">
+    <img
+      src="images/ct_banner.png"
+      width="500"
+      id="ctimg"
+      onmouseover="mouseOver(4)"
+      onmouseout="mouseOut(4)"
+      class = "rounded"
+    /> </a>
+    <dl class = "four maintxt">
+      <dt> <b> Coffee Talk </b> </dt>
+      <dd>
+        <em>
+          "Coffee Talk is a coffee brewing and heart-to-heart talking simulator
+          about listening to fantasy-inspired modern peoples’ problems, and
+          helping them by serving up a warm drink or two."
+        </em>
+      </dd>
+    </dl>
+  </div>
+    <p>
+      <b
+        >Check out the <a href="info.html">info page</a> for prices and platform
+        information!
+      </b>
+    </p>
+    <br />
+    <form action="/form-handler" method="post">
+      <fieldset>
+        <legend>Game suggestion?</legend>
+        <label for="game">Suggest a cozy game not listed here:</label>
+        <br />
+        <input type="text" id="game" name="game" />
+        <br />
+        <label for="info"> Additional info: </label>
+        <br />
+        <textarea name="info" rows="5" cols="50"></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+    <hr />
+    <br />
+    <script>
+      let icons = [];
+      for (var i = 0; i < 4; i++) {
+        let num = i;
+        icons[i] = "images/icon" + num + ".png";
+      }
+      let switch1 = document.getElementById("icon1");
+      let switch2 = document.getElementById("icon2");
+      function mouseOverIcon1() {
+        if (switch1.getAttribute("src") == "images/icon0.png") {
+          switch1.setAttribute("src", icons[1]);
+        } else if (switch1.getAttribute("src") == "images/icon1.png") {
+          switch1.setAttribute("src", icons[2]);
+        } else if (switch1.getAttribute("src") == "images/icon2.png") {
+          switch1.setAttribute("src", icons[3]);
+        } else if (switch1.getAttribute("src") == "images/icon3.png") {
+          switch1.setAttribute("src", icons[0]);
+        }
+      }
+      function mouseOverIcon2() {
+        if (switch2.getAttribute("src") == "images/icon0.png") {
+          switch2.setAttribute("src", icons[1]);
+        } else if (switch2.getAttribute("src") == "images/icon1.png") {
+          switch2.setAttribute("src", icons[2]);
+        } else if (switch2.getAttribute("src") == "images/icon2.png") {
+          switch2.setAttribute("src", icons[3]);
+        } else if (switch2.getAttribute("src") == "images/icon3.png") {
+          switch2.setAttribute("src", icons[0]);
+        }
+      }
+
+      let acbg = document.getElementById("acnav");
+      let sdbg = document.getElementById("sdnav");
+      let srbg = document.getElementById("srnav");
+      let ctbg = document.getElementById("ctnav");
+      let infobg = document.getElementById("infonav");
+      bgs = [acbg, sdbg, srbg, ctbg, infobg];
+
+      function mouseOverNav(a) {
+        if (a == 1) {
+          acbg.style.backgroundColor = "#b2ebde";
+          acbg.style.fontWeight = "bold";
+        } else if (a == 2) {
+          sdbg.style.backgroundColor = "#fff5c2";
+          sdbg.style.fontWeight = "bold";
+        } else if (a == 3) {
+          srbg.style.backgroundColor = "#ffd1f0";
+          srbg.style.fontWeight = "bold";
+        } else if (a == 4) {
+          ctbg.style.backgroundColor = "#b89fd6";
+          ctbg.style.fontWeight = "bold";
+        } else {
+          infobg.style.backgroundColor = "#fffaf0";
+          infobg.style.fontWeight = "bold";
+        }
+      }
+      function mouseOutNav() {
+        for (let i = 0; i < bgs.length; i++) {
+          bgs[i].style.backgroundColor = "#f7e7d5";
+          bgs[i].style.fontWeight = "normal";
+        }
+      }
+
+      let acImage = document.getElementById("acimg");
+      let sdImage = document.getElementById("sdimg");
+      let srImage = document.getElementById("srimg");
+      let ctImage = document.getElementById("ctimg");
+
+      function mouseOver(a) {
+        if (a == 1) {
+          acImage.width = "520";
+        } else if (a == 2) {
+          sdImage.width = "520";
+        } else if (a == 3) {
+          srImage.width = "520";
+        } else if (a == 4) {
+          ctImage.width = "520";
+        }
+      }
+      function mouseOut(a) {
+        if (a == 1) {
+          acImage.width = "500";
+        } else if (a == 2) {
+          sdImage.width = "500";
+        } else if (a == 3) {
+          srImage.width = "500";
+        } else if (a == 4) {
+          ctImage.width = "500";
+        }
+      }
+    </script>
+    <footer>
+      <img src = "https://64.media.tumblr.com/f7dd52dd3e23e827f44a68e4f7a01d49/c717582627235335-e2/s400x600/0e6adb36be6fa01c046b28095e29b34155dade63.gifv" width = "200px">
+      <br>
+      <a href="../project02.html"> Home </a>
+      <br />
+      Copyright &copy; 2022 by me
+      <br />
+      <a
+        href="https://www.flaticon.com/free-icons/online-game"
+        title="online game icons"
+        >Online game icons created by Freepik - Flaticon</a
+      >
+    </footer>
+  </body>
+</html>

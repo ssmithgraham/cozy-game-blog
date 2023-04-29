@@ -1,0 +1,92 @@
+ body {
+        background-color: #f7e7d5;
+        font-family: Garamond ;
+        font-weight: normal;
+        font-size: 18px;
+        margin: 0 10%;
+      }
+h1 {
+        text-align: center;
+        color: #453a35;
+        font-weight: bold;
+}
+a:link, a:visited{
+	color: saddlebrown;
+}
+a:hover{
+	color: rebeccapurple;
+}
+a{
+	text-decoration: none;
+}
+.gamescontainer{
+	display: grid;
+	height: 500px;
+	width: 900px;
+	grid-template-rows: [row1] 50% [row2] 50% ;
+	grid-template-columns: [col1] 50% [col2] 50%;
+	grid-column-gap: 6em;
+	grid-row-gap: 5em;
+	margin-bottom: 15em;
+
+	grid-template-areas:
+	"ac sv"
+	"sr ct";
+}
+.one{
+	grid-area: ac;
+	z-index: 1;
+
+}
+
+.two{
+	grid-area: sv;
+	z-index: 1;
+}
+
+.three{
+	grid-area: sr;
+	z-index: 1;
+}
+
+.four{
+	grid-area: ct;
+	z-index: 1;
+}
+
+.mainimg{
+	opacity: 100%;
+	z-index: 3;
+	box-shadow: 3em 2em .8em darkgray;
+	transition-property: opacity;
+	transition-duration: .6s;
+	transition-delay: .5s;
+	transition-timing-function: ease-in-out;
+
+}
+.mainimg:hover, .mainimg:focus{
+	opacity: 0%;
+}
+
+.maintxt{
+	border-radius: 2em;
+	position: relative;
+	left: 2em;
+	top: 1em;
+	background-color: #fffaf0;
+	padding: 2em;
+	border: dotted rosybrown;
+	line-height: 1.4em;
+}
+.rounded{
+	border-radius: 1em;
+}
+.questionbox{
+	scale: 1;
+	transition-property: scale;
+	transition-duration: .6s;
+	transition-timing-function: ease-in-out;
+}
+.questionbox:hover, .questionbox:focus{
+	scale: 1.2;
+}
